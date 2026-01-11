@@ -1,7 +1,7 @@
 <?php
 namespace OCA\FilesScripts\Command;
 
-use OC\Core\Command\Base;
+use OCP\Command\Base;
 use OCA\FilesScripts\Db\ScriptMapper;
 use OCA\FilesScripts\Service\ScriptService;
 use Symfony\Component\Console\Input\InputInterface;
@@ -27,7 +27,7 @@ class ExportScripts extends Base {
 		parent::configure();
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output)  {
+	protected function execute(InputInterface $input, OutputInterface $output): int  {
 		$scriptId = $input->getOption('id');
 		$scriptId = $scriptId ? intval($scriptId) : null;
 		if ($scriptId !== null) {

@@ -1,7 +1,7 @@
 <?php
 namespace OCA\FilesScripts\Command;
 
-use OC\Core\Command\Base;
+use OCP\Command\Base;
 use OCA\FilesScripts\Db\ScriptMapper;
 use OCA\FilesScripts\Service\ScriptService;
 use OCA\FilesScripts\Service\ScriptValidationException;
@@ -28,7 +28,7 @@ class ImportScripts extends Base {
 		parent::configure();
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output)  {
+	protected function execute(InputInterface $input, OutputInterface $output): int  {
 		$json = file_get_contents("php://stdin");
 		if (false === $json) {
 			$output->writeln('<error>You need an interactive terminal to run this command</error>');

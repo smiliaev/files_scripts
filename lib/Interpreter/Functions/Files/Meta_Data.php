@@ -2,7 +2,9 @@
 
 namespace OCA\FilesScripts\Interpreter\Functions\Files;
 
-use OC\Log\File;
+// change for 32 version
+//use OC\Log\File;
+use OCP\Files\File;
 use OCA\FilesScripts\Interpreter\RegistrableFunction;
 use OCP\Files\Folder;
 use Psr\Log\LoggerInterface;

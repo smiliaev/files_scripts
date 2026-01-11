@@ -1,7 +1,7 @@
 <?php
 namespace OCA\FilesScripts\Command;
 
-use OC\Core\Command\Base;
+use OCP\Command\Base;
 use OCA\FilesScripts\Db\ScriptMapper;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -21,7 +21,7 @@ class ListScripts extends Base {
 		parent::configure();
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output)  {
+	protected function execute(InputInterface $input, OutputInterface $output): int  {
 		$output->writeln('<info>Listing file actions:</info>');
 		$scripts = $this->scriptMapper->findAll();
 

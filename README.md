@@ -11,8 +11,8 @@ The File Actions app is a scripting tool, which administrators can employ to aut
 ## Installation & Configuration
 
 ### Required:
-  * Nextcloud >=23
-  * PHP >=7.4
+  * Nextcloud >=32
+  * PHP >=8.1
 
 ### Recommended:
 The app includes a Lua interpreter which runs on PHP. This interpreter is still [under development](https://github.com/Raudius/Luar) and its use is **not** recommended. For a faster and more reliable solution, install the Lua PHP extension.

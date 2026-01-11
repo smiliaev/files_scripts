@@ -1,7 +1,7 @@
 <?php
 namespace OCA\FilesScripts\Command;
 
-use OC\Core\Command\Base;
+use OCP\Command\Base;
 use OCA\FilesScripts\Db\ScriptInputMapper;
 use OCA\FilesScripts\Db\ScriptMapper;
 use OCA\FilesScripts\Interpreter\Context;
@@ -44,7 +44,7 @@ class RunScript extends Base {
 		parent::configure();
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output)  {
+	protected function execute(InputInterface $input, OutputInterface $output): int  {
 		$scriptId = $input->getArgument('id');
 		$userId = $input->getOption('user');
 		$scriptInputsJson = $input->getOption('inputs') ?? '{}';
